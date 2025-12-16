@@ -1,15 +1,16 @@
-<app-header></app-header>
+<app-header [grozs]="grozaVertiba()"></app-header>
 
 <form>
-    @for( prece of preceForm.precesMasivs; track $index; let i = $index ) {
-        <div>
-<div>
-    <label>{{prece.cena().value()}}</label>&nbsp;
-    <label>{{prece.nosaukums().value()}}</label>
-    <input type="checkbox" [field]="prece.check" />&nbsp;
-    <button type="button" (click)="nolasit(i)">Nolasit inputu</button>
-</div>
-        </div>
-    }
+  @for( prece of preceForm.precesMasivs; track $index; let i = $index ) {
+  <div>
+    <div>
+      <label>{{ prece.cena().value() }}</label
+      >&nbsp;
+      <label>{{ prece.nosaukums().value() }}</label>
+      <input type="number" [field]="prece.daudzums" />&nbsp;
+      <button type="button" (click)="nolasit(i)">Nolasit inputu</button>
+    </div>
+  </div>
+  }
 </form>
 

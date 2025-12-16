@@ -1,13 +1,13 @@
+import { DecimalPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { PreceT } from '../models/produktuModelis';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [DecimalPipe],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
-  counter = input<PreceT[]>([]);
+  grozs = input<number>(0);
 
 }

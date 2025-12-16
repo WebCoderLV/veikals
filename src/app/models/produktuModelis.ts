@@ -1,7 +1,7 @@
-export type PreceT = {
+type PreceT = {
     nosaukums: string;
     cena: number;
-    check: boolean;
+    daudzums: number;
 }
 
 export type DaudzPrecesT = {
